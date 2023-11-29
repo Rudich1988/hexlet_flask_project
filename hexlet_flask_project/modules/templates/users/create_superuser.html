@@ -1,0 +1,11 @@
+<form action="{{ url_for('create_superuser')}}" method="post">
+    <div>
+        <label>
+           введите пароль
+           <input type="text" name="password" value="{{ password['password']}}">
+           {% if errors %}
+             {{ errors['password'] }}
+           {% endif %} 
+        </label>
+    </div>
+</form>
